@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2Guia5.1">
+  <ClassDiagramComponents>
+    <Class name="Cuenta" package="" visibility="public" xPosition="158.0" yPosition="190.0">
+      <Fields>
+        <Field name="numero" type="long" visibility="private"/>
+        <Field name="saldo" type="double" visibility="private"/>
+        <Field name="titular" type="Cliente" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="depositar" returnType="void" visibility="public">
+          <Argument type="double" name="cantidad"/>
+        </Method>
+        <Method name="extraer" returnType="void" visibility="public">
+          <Argument type="double" name="cantidad"/>
+        </Method>
+        <Method name="cambiarInteresAnual" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="verTitular" returnType="Cliente" visibility="public"/>
+        <Method name="verSaldo" returnType="double" visibility="public"/>
+        <Method name="listarMovimientos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="538.0" yPosition="107.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="localidad" type="String" visibility="private"/>
+        <Field name="fNacimiento" type="LocalDate" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Movimiento" package="" visibility="public" xPosition="528.0" yPosition="390.0">
+      <Fields>
+        <Field name="fecha" type="LocalDate" visibility="private"/>
+        <Field name="tipo" type="char" visibility="private"/>
+        <Field name="importe" type="double" visibility="private"/>
+        <Field name="saldo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene un" source="Cuenta" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene un" source="Cuenta" target="Movimiento" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1extraGuia4b">
+  <ClassDiagramComponents>
+    <Class name="Alquiler" package="" visibility="public" xPosition="623.0" yPosition="78.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="fechaing" type="LocalDate" visibility="private"/>
+        <Field name="fechaDevolucion" type="LocalDate" visibility="private"/>
+        <Field name="posicionAmarre" type="int" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="BarcoMotor" package="" visibility="public" xPosition="457.0" yPosition="559.0">
+      <Fields>
+        <Field name="potenciaCv" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UntitledClass2" package="" visibility="public" xPosition="1342.0" yPosition="128.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Velero" package="" visibility="public" xPosition="216.0" yPosition="559.0">
+      <Fields>
+        <Field name="mastiles" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="" visibility="public" xPosition="784.0" yPosition="559.0">
+      <Fields>
+        <Field name="camarotes" type="int" visibility="private"/>
+        <Field name="potenciaCv" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="" visibility="public" xPosition="418.0" yPosition="304.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="double" visibility="protected"/>
+        <Field name="anioFabricacion" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Velero" target="Barco"/>
+    <IsRelation name="is" source="BarcoMotor" target="Barco"/>
+    <IsRelation name="is" source="Yate" target="Barco"/>
+    <HasRelation name="alquila" source="Alquiler" target="Barco" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

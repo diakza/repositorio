@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1extraguia4">
+  <ClassDiagramComponents>
+    <Class name="Barco" package="" visibility="public" xPosition="170.0" yPosition="254.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="double" visibility="protected"/>
+        <Field name="anioFabricacion" type="int" visibility="protected"/>
+        <Field name="moduloBarco" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CalcularTipodeBarco" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Alquiler" package="" visibility="public" xPosition="512.0" yPosition="57.0">
+      <Fields>
+        <Field name="titanic" type="Barco" visibility="private"/>
+        <Field name="fechaing" type="LocalDate" visibility="private"/>
+        <Field name="fechaDevolucion" type="LocalDate" visibility="private"/>
+        <Field name="posicionAmarre" type="int" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="nombrecliente" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Velero" package="" visibility="public" xPosition="31.0" yPosition="560.0">
+      <Fields>
+        <Field name="mastiles" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Yate" package="" visibility="public" xPosition="302.0" yPosition="551.0">
+      <Fields>
+        <Field name="camarotes" type="int" visibility="private"/>
+        <Field name="cv" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Barcomotor" package="" visibility="public" xPosition="568.0" yPosition="551.0">
+      <Fields>
+        <Field name="potenciacv" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Velero" target="Barco"/>
+    <IsRelation name="is" source="Barcomotor" target="Barco"/>
+    <HasRelation name="alquila" source="Alquiler" target="Barco" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Yate" target="Barco"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="guia4ejercicio3">
+  <ClassDiagramComponents>
+    <Interface name="Calculosformas" package="Guia4ejercicio3" visibility="public" xPosition="673.0" yPosition="34.0">
+      <Methods>
+        <Method name="Calculararea" returnType="double" visibility="public"/>
+        <Method name="CalcularPerimetro" returnType="double" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Rectangulo" package="Guia4ejercicio3" visibility="public" xPosition="794.0" yPosition="402.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Calculararea" returnType="double" visibility="public"/>
+        <Method name="CalcularPerimetro" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="Guia4ejercicio3" visibility="public" xPosition="293.0" yPosition="402.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Calculararea" returnType="double" visibility="public"/>
+        <Method name="CalcularPerimetro" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Guia4ejercicio3.Circulo" target="Guia4ejercicio3.Calculosformas"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Guia4ejercicio3.Rectangulo" target="Guia4ejercicio3.Calculosformas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

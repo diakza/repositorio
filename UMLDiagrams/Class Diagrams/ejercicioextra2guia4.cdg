@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicioextra2guia4">
+  <ClassDiagramComponents>
+    <Class name="Combustible" package="" visibility="public" xPosition="400.0" yPosition="107.0">
+      <Fields>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="tipoCombustible" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Viaje" package="" visibility="public" xPosition="1123.0" yPosition="75.0">
+      <Fields>
+        <Field name="origen" type="String" visibility="private"/>
+        <Field name="destino" type="String" visibility="private"/>
+        <Field name="distancia" type="double" visibility="private"/>
+        <Field name="carro" type="Vehiculos" visibility="private"/>
+        <Field name="cantPeajes" type="int" visibility="private"/>
+        <Field name="kmOrigen" type="double" visibility="private"/>
+        <Field name="kmDestino" type="double" visibility="private"/>
+        <Field name="combustible" type="Combustible" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calculoDeDistancia" returnType="void" visibility="public"/>
+        <Method name="calculoDePeajes" returnType="void" visibility="public"/>
+        <Method name="calculoCombustible" returnType="void" visibility="public"/>
+        <Method name="calculoTotal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehiculos" package="" visibility="public" xPosition="613.0" yPosition="326.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="patente" type="int" visibility="protected"/>
+        <Field name="combustible" type="Combustible" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="400.0" yPosition="701.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camiones" package="" visibility="public" xPosition="710.0" yPosition="701.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camionetas" package="" visibility="public" xPosition="1082.0" yPosition="690.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Camionetas" target="Vehiculos"/>
+    <HasRelation name="tiene" source="Vehiculos" target="Combustible" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Camiones" target="Vehiculos"/>
+    <HasRelation name="tiene" source="Viaje" target="Vehiculos" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Auto" target="Vehiculos"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1extraGuia5">
+  <ClassDiagramComponents>
+    <Class name="Pila" package="" visibility="public" xPosition="668.0" yPosition="79.0">
+      <Fields>
+        <Field name="tope" type="int" visibility="private"/>
+        <Field name="elementos" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

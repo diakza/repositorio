@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio6Guia5.2">
+  <ClassDiagramComponents>
+    <Class name="Ropa" package="" visibility="public" xPosition="446.0" yPosition="537.0">
+      <Fields>
+        <Field name="tipoTela" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Electrodomesticos" package="" visibility="public" xPosition="755.0" yPosition="613.0">
+      <Fields>
+        <Field name="consumo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perfumeria" package="" visibility="public" xPosition="1210.0" yPosition="613.0">
+      <Fields>
+        <Field name="cc" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="" visibility="public" xPosition="727.0" yPosition="253.0">
+      <Fields>
+        <Field name="precioLista" type="int" visibility="protected"/>
+        <Field name="Stock" type="int" visibility="protected"/>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="descripcion" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Catalogo" package="" visibility="public" xPosition="898.0" yPosition="25.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Electrodomesticos" target="Producto"/>
+    <IsRelation name="is" source="Ropa" target="Producto"/>
+    <UseRelation name="usa" source="Catalogo" target="Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Perfumeria" target="Producto"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

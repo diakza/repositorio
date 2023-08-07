@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio3Guia5.2">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="625.0" yPosition="233.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Directorio" package="" visibility="public" xPosition="1029.0" yPosition="284.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2guia4">
+  <ClassDiagramComponents>
+    <Class name="Electrodomestico" package="" visibility="public" isAbstract="true" xPosition="693.0" yPosition="81.0">
+      <Fields>
+        <Field name="precio" type="double" visibility="protected"/>
+        <Field name="color" type="String" visibility="protected"/>
+        <Field name="consumoEnergetico" type="char" visibility="protected"/>
+        <Field name="peso" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="consumoEnergetico"/>
+          <Argument type="double" name="peso"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="comprobarConsumoEnergetio" returnType="char" visibility="public">
+          <Argument type="char" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="String" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lavadora" package="" visibility="public" xPosition="851.0" yPosition="495.0">
+      <Fields>
+        <Field name="carga" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Televisor" package="" visibility="public" xPosition="356.0" yPosition="495.0">
+      <Fields>
+        <Field name="resolucion" type="double" visibility="private"/>
+        <Field name="sintonizador" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Televisor" target="Electrodomestico"/>
+    <IsRelation name="is" source="Lavadora" target="Electrodomestico"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

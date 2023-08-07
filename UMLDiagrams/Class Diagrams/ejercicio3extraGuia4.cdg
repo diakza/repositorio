@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio3extraGuia4">
+  <ClassDiagramComponents>
+    <Class name="Servicio" package="" visibility="public" isAbstract="true" xPosition="753.0" yPosition="177.0">
+      <Fields>
+        <Field name="trabajador" type="String" visibility="protected"/>
+        <Field name="cliente" type="String" visibility="protected"/>
+        <Field name="fechaInicio" type="LocalDate" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="costeMaterial" returnType="double" visibility="public"/>
+        <Method name="costeManoObra" returnType="double" visibility="public"/>
+        <Method name="costeTotal" returnType="double" visibility="public"/>
+        <Method name="detalleServicio" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RevisionAlarma" package="" visibility="public" xPosition="444.0" yPosition="475.0">
+      <Fields>
+        <Field name="numeroAlarmas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="costeMaterial" returnType="double" visibility="public"/>
+        <Method name="costeManoObra" returnType="double" visibility="public"/>
+        <Method name="costeTotal" returnType="double" visibility="public"/>
+        <Method name="detalleServicio" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TrabajoPintura" package="" visibility="public" xPosition="971.0" yPosition="475.0">
+      <Fields>
+        <Field name="edificacion" type="String" visibility="private"/>
+        <Field name="precioPintura" type="double" visibility="private"/>
+        <Field name="superficie" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="costeMaterial" returnType="double" visibility="public"/>
+        <Method name="costeManoObra" returnType="double" visibility="public"/>
+        <Method name="costeTotal" returnType="double" visibility="public"/>
+        <Method name="detalleServicio" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Empresa" package="" visibility="public" xPosition="343.0" yPosition="177.0">
+      <Fields>
+        <Field name="cantidadServicios" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="contratarServicio" returnType="void" visibility="public">
+          <Argument type="Servicio" name="servicio"/>
+        </Method>
+        <Method name="mostrarCostoTotalDeObras" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="usa" source="Empresa" target="Servicio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="TrabajoPintura" target="Servicio"/>
+    <IsRelation name="is" source="RevisionAlarma" target="Servicio"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

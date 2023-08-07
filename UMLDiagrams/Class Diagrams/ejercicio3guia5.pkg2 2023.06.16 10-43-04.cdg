@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio3guia5.pkg2">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio3Guia52" package="ejercicio3guia5.pkg2" visibility="public" xPosition="338.0" yPosition="397.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cine" package="" visibility="public" xPosition="-23.0" yPosition="202.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarPelicula" returnType="void" visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="listarTodo" returnType="void" visibility="public"/>
+        <Method name="listarDuranMas" returnType="void" visibility="public"/>
+        <Method name="listarMenorDuracionAMayor" returnType="void" visibility="public"/>
+        <Method name="listarOrdenadasPorTitulo" returnType="void" visibility="public"/>
+        <Method name="listarOrdenadasPorDirector" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="" visibility="public" xPosition="430.0" yPosition="190.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="director" type="String" visibility="private"/>
+        <Field name="duracion" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="usa" source="ejercicio3guia5.pkg2.Ejercicio3Guia52" target="Cine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene un" source="Cine" target="Pelicula" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="usa" source="ejercicio3guia5.pkg2.Ejercicio3Guia52" target="Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

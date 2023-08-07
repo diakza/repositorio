@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia4 Ejercicio4">
+  <ClassDiagramComponents>
+    <Class name="Position" package="" visibility="public" xPosition="380.0" yPosition="241.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Personaje" package="" visibility="public" isAbstract="true" xPosition="603.0" yPosition="65.0">
+      <Fields>
+        <Field name="ubicacion" type="Position" visibility="protected"/>
+        <Field name="nick" type="String" visibility="protected"/>
+        <Field name="vida" type="int" visibility="protected"/>
+        <Field name="energia" type="int" visibility="protected"/>
+        <Field name="orientacion" type="char" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Disparar" returnType="void" visibility="public"/>
+        <Method name="Girar" returnType="void" visibility="public"/>
+        <Method name="Avanzar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guerrero" package="" visibility="public" isFinal="true" xPosition="909.0" yPosition="223.0">
+      <Fields>
+        <Field name="caballo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Disparar" returnType="void" visibility="public"/>
+        <Method name="Girar" returnType="void" visibility="public"/>
+        <Method name="Avanzar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Guerrero" target="Personaje"/>
+    <HasRelation name="tiene" source="Personaje" target="Position" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

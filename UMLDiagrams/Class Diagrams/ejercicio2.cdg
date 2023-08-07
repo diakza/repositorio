@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="kiosco" package="" visibility="public" xPosition="287.0" yPosition="98.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="cuit" type="int" visibility="private"/>
+        <Field name="empleado1" type="Empleado" visibility="private"/>
+        <Field name="empleado2" type="Empleado" visibility="private"/>
+        <Field name="empleado3" type="Empleado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="int" name="cuit"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="empleado" package="" visibility="public" xPosition="674.0" yPosition="245.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="fechaing" type="Date" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="kiosco" target="empleado" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

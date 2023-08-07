@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio extra 1">
+  <ClassDiagramComponents>
+    <Class name="Gps" package="" visibility="public" xPosition="409.0" yPosition="121.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="ultimaubi" type="Posicion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="889.0" yPosition="139.0">
+      <Fields>
+        <Field name="latitud" type="double" visibility="private"/>
+        <Field name="longitud" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Posicion" package="" visibility="public" xPosition="644.0" yPosition="538.0">
+      <Fields>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Persona" target="Gps" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="Gps" target="Posicion" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

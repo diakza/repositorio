@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio 3">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="" visibility="public" xPosition="430.0" yPosition="220.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="combustible" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="patente"/>
+          <Argument type="String" name="color"/>
+          <Argument type="int" name="combustible"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Rueda" package="" visibility="public" xPosition="918.0" yPosition="236.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="psi" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="double" name="psi"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Auto" target="Rueda" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
